@@ -9,6 +9,12 @@ meter mi nombre y mi NIA (llevar el carnet del CEU)
 abrirlo con visual studio code
 Una vez hecho todo, hago: (staged all changes, commit), git commit -am "mensaje", git push 
 
+PARA CLONAR EN VSCODE
+Ctrl + Shift + P -> me salen los comandos de git
+Git: clone -> elijo esta opción
+Copio la URL del repo: https://github.com/martigalan/forMe_SW1.git
+Enter + Elijo carpeta de destino (Escritorio) + Add to workspace -> lo tengo
+
 ¿QUÉ TIENE DENTRO UNA COOKIE?
 
 Session {cookie: Cookie, username: {…}, req: IncomingMessage, id: 'd-OrxOMYRqloKXbgltXiSP2PhJY6xL2k', reload: ƒ, …}
