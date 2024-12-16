@@ -1,0 +1,29 @@
+RUTAS A METER EN EL EXAMEN
+Path Intellisense
+JavaScript and TypeScript Nightly
+
+COMANDOS EXAMEN
+cd Escri (tab)
+git clone (lo que me diga el profe)
+meter mi nombre y mi NIA (llevar el carnet del CEU) 
+abrirlo con visual studio code
+Una vez hecho todo, hago: (staged all changes, commit), git commit -am "mensaje", git push 
+
+¿QUÉ TIENE DENTRO UNA COOKIE?
+
+Session {cookie: Cookie, username: {…}, req: IncomingMessage, id: 'd-OrxOMYRqloKXbgltXiSP2PhJY6xL2k', reload: ƒ, …}
+cookie =
+Cookie {path: '/', _expires: null, originalMaxAge: null, httpOnly: true, secure: false}
+username =
+{username: 'carlos'}
+id =
+'d-OrxOMYRqloKXbgltXiSP2PhJY6xL2k'
+reload =
+ƒ reload(callback) {\n        debug('reloading %s', this.id)\n        _reload.call(this, rewrapmethods(this, callback))\n      }
+req =
+IncomingMessage {_events: {…}, _readableState: ReadableState, _maxListeners: undefined, socket: Socket, httpVersionMajor: 1, …}
+save =
+ƒ save() {\n        debug('saving %s', this.id);\n        savedHash = hash(this);\n        _save.apply(this, arguments);\n      }
+[[Prototype]] =
+Object
+Hold Alt key to switch to editor language hover
