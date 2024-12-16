@@ -1,0 +1,35 @@
+<%- include("header", {}) %>
+<h1><%= title %></h1>
+<form method="post" action="/register">
+    <label for="user">Username:</label> <!--for tiene que hacer match con id del input!-->
+    <input type="text" id="user" name="user"><br>
+    <label for="pass">Password:</label>
+    <input type="password" id="pass" name="pass"><br>
+    <label for="repeatPass">Repeat password:</label>
+    <input type="password" id="repeatPass" name="repeatPass"><br>
+    <label for="role">Choose a role:</label>
+    <select name="role" id="role">
+        <option value="invited">Invited</option>
+        <option value="admin">Administrator</option>
+    </select>
+    <br><br>
+    <input type="submit" value="Submit">
+</form>
+<%- include("footer", {}) %>
+
+<!--OJO! las validaciones en el cliente SE DEBEN HACER AQUÍ-->
+<script>
+    document.querySelector("form").addEventListener("submit", function(event) {
+        const pass = document.getElementById("pass").value;
+        const repeatPass = document.getElementById("repeatPass").value;
+
+        // Validaciones
+        if (pass !== repeatPass) {
+            alert("Passwords do not match!");
+            event.preventDefault(); // Evita el envío del formulario
+        } else if (pass.length < 8) {
+            alert("Password must be at least 8 characters long!");
+            event.preventDefault();
+        }
+    });
+</script>
