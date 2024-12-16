@@ -1,0 +1,21 @@
+<%- include("header", {}) %>
+<!-- Incluir etiquetas link específicas de esta view  -->
+<link rel='stylesheet' href='/stylesheets/chat.css'>
+<script src="/socket.io/socket.io.js"></script>
+<script src="/javascripts/chat.js" defer></script>
+<%- include("nav", {}) %>
+<div class="container">
+    <h1><%= title %></h1>
+    <p>Bienvenido a <%= title %></p>
+    <p>Aquí podrá escribir mensajes con otros usuarios de nuestra plataforma.</p>
+</div>
+<div id="main">
+    <ul id="messages" class="messages"></ul>
+    <form id="form">
+        <input id="input">
+        <button>Send</button>
+    </form>
+    <!-- Pasar el nombre del usuario a través de un atributo data-* -->
+    <div id="user" data-username="<%= user.username %>"></div>
+</div>
+<%- include("footer", {}) %>

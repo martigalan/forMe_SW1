@@ -1,0 +1,26 @@
+<%- include("header", {}) %>
+<%- include("nav", {}) %>
+<h1>¡Bienvenido a <%= title %>!</h1>
+<p>Gracias por logearte <%= user.username%></p> <!--ASÍ PONGO EL NOMBRE DEL USUARIO!-->
+<button type="submit" id="botonLogin">Borrar</button>
+<form id="deleteForm" action="/deleteLastLogin">
+    <button type="submit" id="buttonDelete">Delete</button>
+</form> 
+<%- include("footer", {}) %>
+
+<script>
+    //borramos el login utilizando el método POST
+    document.getElementById('botonLogin').addEventListener('click', async() => {
+        const response = await fetch('/deleteLastLogin', { method: 'POST' });
+    });
+    //borramos el login utilizando el método DELETE
+    document.getElementById('buttonDelete').addEventListener('click', async () => {
+    const response = await fetch('/deleteLastLogin', { method: 'DELETE' });
+    if (response.ok) {
+        alert('¡Last login borrado!');
+        window.location.reload(); // Recarga la página si es necesario
+    } else {
+        alert('Error al borrar el last login');
+    }
+});
+</script>

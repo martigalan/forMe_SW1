@@ -1,0 +1,26 @@
+<% if (!cookies) { %> <!--aqui le paso el nombre que le he puesto EN EL RENDER, obteniendo la info de la sesión-->
+    <div id="msj" class="footer">
+        <h1>Uso de Cookies</h1>
+        <p>Nos vemos obligados a informarte del uso de cookies necesarias para que funciones esta aplicación web</p>
+        <form method="post" action="/acceptCookies">
+            <button type="submit" id="boton">Aceptar</button>
+            <a href="https://www.google.es/">
+                <button type="button">Rechazar</button>
+            </a>
+        </form> <!--OJO! para que se envíe un formulario, debe ser del tipo SUBMIT no BUTTON!!-->
+    </div>
+<% } %>
+</body>
+</html>
+
+<script> 
+    document.addEventListener("DOMContentLoaded", () => {  
+        const mensaje = document.getElementById('msj');
+        const boton = document.getElementById('boton');
+        
+        boton.addEventListener('click', () => {
+            mensaje.style.display = "none"; //así se quita cuando le doy a aceptar
+        });
+
+    });
+</script>

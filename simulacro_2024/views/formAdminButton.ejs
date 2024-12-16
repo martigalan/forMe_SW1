@@ -1,0 +1,16 @@
+<form action="/adminPannel" method="post" id="roleForm-<%= user.username %>">
+    <input type="hidden" name="username" value="<%= user.username %>">
+    <input type="hidden" name="newRole" id="newRole-<%= user.username %>" value="<%= user.role === 'admin' ? 'user' : 'admin' %>">
+    <label class="switch">
+        <input 
+            type="checkbox" 
+            name="roleSwitch" 
+            id="roleSwitch-<%= user.username %>" 
+            <%= user.role === 'admin' ? 'checked' : '' %>
+            onchange="toggleRole('<%= user.username %>')"
+        >
+        <span class="slider"></span>
+    </label>
+</form>
+
+<!--id="roleSwitch-user.usename -> de esta manera LO ASOCIAMOS a CADA usuario-->

@@ -1,0 +1,52 @@
+<%- include("header", {}) %>
+<%- include("nav", {}) %>
+<% if (user.username === "admin") { %> 
+    <div class="container">
+        <h1><%= title %></h1>
+        <p>Bienvenido a <%= title %>. Este es el panel de administrador.</p>
+        <p>Usuarios:</p>
+        <img src="/images/users/1.jpg" alt="Alberto" width="75" height="75">
+        <p>Alberto <%- include("formAdminButton"), { username: "Alberto"} %></p><br>
+        <img src="/images/users/2.jpg" alt="Ana" width="75" height="75">
+        <p>Ana <%- include("formAdminButton"), { username: "Ana"} %></p><br>
+        <img src="/images/users/3.jpg" alt="Daniel" width="75" height="75">
+        <p>Daniel <%- include("formAdminButton"), { username: "Daniel"} %></p><br>
+        <img src="/images/users/4.jpg" alt="Silvia" width="75" height="75">
+        <p>Silvia <%- include("formAdminButton"), { username: "Silvia"} %></p><br>
+        <img src="/images/users/5.jpg" alt="aaa" width="75" height="75">
+        <p>aaa <%- include("formAdminButton"), { username: "aaa"} %></p>
+    </div>
+<% } %>
+
+<script>
+    function toggleRole(username) {
+    const roleSwitch = document.getElementById(`roleSwitch-${username}`);
+    const newRole = roleSwitch.checked ? "admin" : "user";
+
+    // Actualizar el valor del input oculto
+    document.getElementById(`newRole-${username}`).value = newRole;
+
+    // Hacer una petición POST para cambiar el rol en el servidor
+    fetch('/adminPannel', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+            username: username, // Aquí envías el usuario específico
+            newRole: newRole,
+        }),
+    })
+        .then(response => response.json())
+        .then(data => {
+            if (data.success) {
+                console.log(`El rol de ${username} ha cambiado a ${newRole}`);
+            } else {
+                console.error('Error al cambiar el rol:', data.message);
+            }
+        })
+        .catch(error => console.error('Error:', error));
+}
+
+</script>
+

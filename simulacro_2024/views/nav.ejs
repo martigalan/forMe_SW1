@@ -1,0 +1,23 @@
+<link rel="icon" type="image/x-icon" href="https://www.ceu.es/favicon.ico">
+<!--<link rel="icon" type="image/x-icon" href="/images/nombre.ico">-->
+</head>
+<body>
+    <nav>
+      <ul>
+        <li class="menu_title"><%= title %></li>
+        <li><a href="/">Inicio</a></li>
+        <li><a href="/tienda">Tienda</a></li>
+        <% if (user) { %> <!-- Si el usuario está autenticado -->
+          <% if (role === 'admin') { %> <!-- Opciones para admin -->
+            <li><a href="/adminPannel">Administrator</a></li>
+          <% } %>
+          <% if (role === 'user') { %> <!-- Opciones para usuario normal -->
+            <li><a href="/restricted">Restringido</a></li>
+            <li><a href="/chat">Chat</a></li>
+          <% } %>
+          <li class="right"><a href="/logout">Logout</a></li>
+        <% } else { %> <!-- Si no está autenticado -->
+          <li class="right"><a href="/login">Login</a></li>
+        <% } %>
+      </ul>
+    </nav>
