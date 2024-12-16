@@ -1,0 +1,38 @@
+.carousel-img {
+    max-height: 300px; 
+    object-fit: cover;
+    transition: transform 0.3s ease-in-out;
+}
+
+.carousel-item:hover .carousel-img {
+    transform: scale(1.2); /*Ampliamos la imagen al pasar el ratón*/
+    object-fit: contain; /*Muestra la imagen completa*/
+}
+
+form {
+    margin-top: 20px;
+}
+
+body, html {
+    height: 100%;
+    overflow: hidden; /*Evita el scroll*/
+}
+
+main {
+    max-height: 100vh; 
+    overflow-y: auto; 
+}
+
+.carousel {
+    margin-bottom: 20px;
+}
+
+.toast-icon {
+    width: 30px;
+    height: auto;
+    background-color: bisque;
+}
+
+.toast-style {
+    background-color: bisque;
+}

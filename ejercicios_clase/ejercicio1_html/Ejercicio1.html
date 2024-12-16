@@ -1,0 +1,131 @@
+﻿<!DOCTYPE html>
+
+<html lang="es" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <link rel="stylesheet" href="Ejercicio1.css">
+    <meta charset="utf-8">
+    <title>Registro de actividades</title>
+    <link rel="icon" type="image/x-icon" href="https://www.ceu.es/favicon.ico">
+</head>
+<body>
+    <div id="header" style="display: flex">
+        <img src="https://www.colegioceusanchinarro.es/wp-content/uploads/ceu.png" alt="Logo CEU" width="100" height="150">
+        <p class="estilo-parrafo">
+            Bienvenidos a la página oficial de actividades de la universidad CEU San Pablo.<br>
+            Aquí podréis encontrar las distintas opciones, así como apuntaros en estas.<br>
+            ¡Espero qué os guste! Por si queréis visitar la página web oficial del CEU, 
+            sección Campus life: <a href="https://www.uspceu.com/alumnos/vida-campus/campus-life">Campus life</a>
+        </p>
+    </div>
+    <div id="navigationMenu">
+        <menu id="menuNavBar">
+            <li><a class="active" href="#home">Inicio</a></li>
+            <li><a href="#news">Noticias</a></li>
+            <li><a href="#contact">Contacto</a></li>
+            <li style="float: right"><a href="#about">Sobre Nosotros</a></li>
+        </menu>
+    </div>
+    <div id="mainBody">
+        <aside class="estilo-aside">
+            <div id="contenedorImagen">
+                <img src="https://www.icmpe.cnrs.fr/wp-content/themes/ICMPE-theme/images/avatar.png" alt="Usuario Invitado" width="100" height="100"> 
+                <h3 id="nombreUsuario">Invitado</h3>
+            </div>
+            <h3>Próximos Eventos</h3>
+            <ul>
+                <li>21-Oct: Charla sobre dispositivos biomédicos</li>
+                <li>30-Oct: Taller de software</li>
+                <li>15-Nov: Feria de empleo</li>
+                <li>30-Nov: Seminario Ciencia y Humanismo</li>
+                <li>03-Dic: CEU te invita al cine</li>
+                <li>10-Dic: Villancicos bajo el árbol de Navidad</li>
+                <li>14-Dic: Concierto coro CEU en Teatro Monumental</li>
+                <li>22-Dic: Copa rectora</li>
+            </ul>
+        </aside>
+        <section id="mainContent">
+            <section id="mainContent" class="secciones">
+                <form class="estilo-form" action="/action_page.php" method="get">
+                    <div class="espaciar-divform">
+                        <label>Nombre y apellidos: </label><br>
+                        <input required type="text" name="fname">
+                    </div>
+                    <div class="espaciar-divform">
+                        <label for="email">Email: </label><br>
+                        <input required type="text" name="email" id="email">
+                        <!--A diferencia del anterior, al ponerlo así extiendes el input a la label, de forma que si hago click se activa el input tb
+                            Tb ayuda a accesibilidad si se usa un lector de pantalla.-->
+                    </div>
+                    <div class="espaciar-divform">
+                        <label for="activity">Elige una actividad:</label>
+                        <select name="actividad" id="activity">
+                            <option value="tirolinas">Tirolinas</option>
+                            <option value="humoramarillo">Humor amarillo</option>
+                            <option value="scaperoom">Scape room</option>
+                            <option value="combatzone">Combat zone</option>
+                        </select>
+                    </div>
+                    <input class="espaciar-divform" type="submit" value="Aceptar">
+                </form>
+                <br>
+                <div class="estilo-tabla">
+                    <table>
+                        <tr>
+                            <th>Actividades CEU</th>
+                            <th>Fecha</th>
+                            <th>Alumnos</th>
+                        </tr>
+                        <tr>
+                            <td>Tirolinas</td>
+                            <td>20-09-2024&nbsp;</td>
+                            <td>
+                                Laura Martínez<br>
+                                Ignacio Pérez<br>
+                                Elena Salas
+                            </td>
+                        <tr>
+                            <td>Humor Amarillo</td>
+                            <td>27-09-2024</td>
+                            <td>
+                                Diego Sánchez<br>
+                                Celia Pérez<br>
+                                Florentino Rodriguez<br>
+                                Antonio González
+                            </td>
+                        <tr>
+                            <td>Scape Room</td>
+                            <td>04-10-2024</td>
+                            <td>
+                                Kiko Jiménez<br>
+                                Clara Ruiz
+                            </td>
+                        <tr>
+                            <td>Combat zone</td>
+                            <td>18-10-2024</td>
+                            <td>Lara García</td>
+                        </tr>
+                    </table>
+                </div>                
+            </section>
+        </section>
+    
+        <aside class="estilo-aside">
+            <h3>Noticias Destacadas</h3>
+            <ul>
+                <li><a href="https://www.uspceu.com/prensa/agenda">Agenda CEU</a></li>
+                <li><a href="https://www.uspceu.com/en/students/campus-life/choir">Coro CEU</a></li>
+                <li><a href="https://www.uspceu.com/alumnos/vida-campus/deportes">Nuevas instalaciones deportivas</a></li>
+            </ul>
+    
+            <h3>Anuncios Importantes</h3>
+            <p>Consulta el nuevo calendario de exámenes.</p>
+            <p>La inscripción para actividades extracurriculares ya está abierta.</p>
+            <p>La inscipción para la escuela de idiomas cierra el próximo viernes 4 Octubre.</p>
+        </aside>
+    </div>
+
+    <footer id="footer">
+        Activity Register - Martina Galán Ingelmo
+    </footer>
+</body>
+</html>
