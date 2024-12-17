@@ -16,6 +16,8 @@ const acceptCookiesRouter = require('./routes/acceptCookies');
 const lastLoginRouter = require('./routes/deleteLastLogin');
 const chatRouter = require('./routes/chat');
 const adminPannelRouter = require('./routes/adminPannel');
+const isBannedRouter = require('./routes/isBanned');
+const isBannedPannelRouter = require('./routes/isBannedPannel');
 
 const app = express();
 //para que funcione socket.io
@@ -85,6 +87,8 @@ app.use('/acceptCookies', acceptCookiesRouter);
 app.use('/deleteLastLogin', lastLoginRouter);
 app.use('/chat', chatRouter);
 app.use('/adminPannel', adminPannelRouter);
+app.use('/isBanned', isBannedRouter);
+app.use('/isBannedPannel', isBannedPannelRouter);
 app.use('/logout', (req,res) =>{ //esto NO se toca, se eliminan automáticamente después de la sesión, NO hace falta especificarlo
   req.session.destroy();
   res.redirect("/");

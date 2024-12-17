@@ -13,7 +13,7 @@ router.post('/', async (req, res) => {
     try {
         req.session.user.lastLogin = ""; //se actualiza el valor de las cookies en la sesión
         //console.log(req.session.user.lastLogin)
-        database.user.setParams(req.session.user.username, {"last_Login":""}); //TODO no se como borrar el lastLogin en la base de datos
+        database.user.setParams(req.session.user.username, {"last_Login":""});
         req.session.message = "¡Last login borrado!";
         res.json({ success: true });
     } catch (error) {

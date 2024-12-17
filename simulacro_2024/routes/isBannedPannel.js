@@ -4,7 +4,7 @@ const database = require('../database');
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
-  res.render('chat', {
+  res.render('isBannedPannel', {
     user: req.session.user, 
     cookies: req.session.user ? req.session.user.cookiesAccepted : false, 
     title:"Embutidos León", 

@@ -4,7 +4,13 @@ const database = require('../database');
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
-  res.render('tienda', {user:req.session.user, cookies: req.session.user ? req.session.user.cookiesAccepted : false, title:"Embutidos León"});
+  res.render('tienda', {
+    user: req.session.user, 
+    cookies: req.session.user ? req.session.user.cookiesAccepted : false, 
+    title:"Embutidos León", 
+    role: req.session.role,
+    isBanned: req.session.isBanned 
+    });
 });
 
 //like posts

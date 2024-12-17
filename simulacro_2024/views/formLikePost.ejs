@@ -1,4 +1,4 @@
-<% if (user) { %> 
+<% if (user && isBanned === false) { %> 
     <form action="/tienda" method="post">
         <input type="hidden" name="postId" value="<%= postId %>"> <!--lo oculto porque no es necesario que el usuario ingrese el valor-->
         <button type="submit">Like</button>

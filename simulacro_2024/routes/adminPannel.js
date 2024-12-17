@@ -4,8 +4,13 @@ const database = require('../database');
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
-  res.render('adminPannel', {user:req.session.user, cookies: req.session.user ? req.session.user.cookiesAccepted : false, title:"Embutidos León"}); 
-  //el title este es el que vemos en la esquina superior izquierda
+  res.render('adminPannel', {
+    user: req.session.user, 
+    cookies: req.session.user ? req.session.user.cookiesAccepted : false, 
+    title:"Embutidos León", //el title este es el que vemos en la esquina superior izquierda
+    role: req.session.role,
+    isBanned: req.session.isBanned 
+    }); 
 });
 
 //admin button 
