@@ -1,6 +1,7 @@
 RUTAS A METER EN EL EXAMEN
 Path Intellisense
 JavaScript and TypeScript Nightly
+ErrorLens?
 
 COMANDOS EXAMEN
 cd Escri (tab)
