@@ -16,6 +16,8 @@ Git: clone -> elijo esta opción
 Copio la URL del repo: https://github.com/martigalan/forMe_SW1.git
 Enter + Elijo carpeta de destino (Escritorio) + Add to workspace -> lo tengo
 
+POR SI ME AYUDA PARA EL CHAT: https://github.com/carlosMoragon/repo_sw1_practica
+
 ¿QUÉ TIENE DENTRO UNA COOKIE?
 
 Session {cookie: Cookie, username: {…}, req: IncomingMessage, id: 'd-OrxOMYRqloKXbgltXiSP2PhJY6xL2k', reload: ƒ, …}
